@@ -20,6 +20,16 @@ const prompts = [
     { jp: "まるが言う: ダンス", en: "Maru says: dance.", image: "images/maru_dance.png" },
     { jp: "まるが言う: ダンスを<ruby>踊<rt>おど</rt></ruby>ろう", en: "Maru says: dance a dance.", image: "images/maru_dance.png" },
     { jp: "まるが言う: <ruby>小<rt>ちい</rt></ruby>さなダンスを<ruby>踊<rt>おど</rt></ruby>ろう", en: "Maru says: Do a little dance", image: "images/maru_dance.png" },
+    { jp: "まるが言う: <ruby>熊<rt>くま</rt></ruby>のような<ruby>咆哮<rt>ほうこう</rt></ruby>。", en: "Maru says: Roar like a bear.", image: "kuma.png" },
+    { jp: "まるが言う: <ruby>猫<rt>ねこ</rt></ruby>のように<ruby>鳴<rt>な</rt></ruby>いてください。", en: "Maru says: Meow like a cat.", image: "images/meow.png" },
+    { jp: "まるが言う: <ruby>犬<rt>いぬ</rt></ruby>のように<ruby>吠<rt>ほ</rt></ruby>えてください。", en: "Maru says: Bark like a dog.", image: "images/bark.png" },
+    { jp: "まるが言う: <ruby>熊<rt>くま</rt></ruby>のように<ruby>歩<rt>ある</rt></ruby>いてください。", en: "Maru says: Walk like a bear.", image: "images/bear.png" },
+    { jp: "まるが言う: <ruby>鳥<rt>とり</rt></ruby>のように<ruby>羽<rt>は</rt></ruby>ばたいてください。", en: "Maru says: Flap your wings like a bird.", image: "images/flap.png" },
+    { jp: "まるが言う: <ruby>馬<rt>うま</rt></ruby>のように<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run like a horse.", image: "images/horse_run.png" },
+    { jp: "まるが言う: <ruby>鶏<rt>にわとり</rt></ruby>のように<ruby>鳴<rt>な</rt></ruby>いてください。", en: "Maru says: Cluck like a chicken.", image: "images/chicken.png" },
+    { jp: "まるが言う: <ruby>魚<rt>さかな</rt></ruby>のように<ruby>泳<rt>およ</rt></ruby>いでください。", en: "Maru says: Swim like a fish.", image: "images/swim.png" },
+    { jp: "まるが言う: <ruby>ウサギ<rt>うさぎ</rt></ruby>のように<ruby>跳<rt>は</rt></ruby>ねてください。", en: "Maru says: Hop like a rabbit.", image: "images/maru_hop.png" },
+    { jp: "まるが言う: <ruby>ライオン<rt></rt></ruby>のように<ruby>吠<rt>ほ</rt></ruby>えてください。", en: "Maru says: Roar like a lion.", image: "images/maru_lionsroar.png" },
     // Add more prompts and corresponding images here
 ];
 
