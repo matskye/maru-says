@@ -22,6 +22,12 @@ document.getElementById('toggle-furigana').addEventListener('click', function() 
     this.textContent = promptTextElement.classList.contains('hide-furigana') ? 'Show Furigana' : 'Hide Furigana';
 });
 
+function stripTags(html) {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    return div.textContent || div.innerText || "";
+}
+
 function speak(text) {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'ja-JP'; // Set to Japanese
@@ -45,8 +51,9 @@ function startNewRound() {
     // Display the Japanese prompt
     document.getElementById('prompt-text').innerHTML = prompt.jp;
 
-    // Call the TTS function to read out the prompt
-    speak(prompt.jp);
+     // Strip HTML tags for TTS
+    const sanitizedText = stripTags(prompt.jp);
+    speak(sanitizedText); // Use sanitized text for TTS
     
     // Hide the English prompt initially, it will be shown after the timer runs out
     document.getElementById('english-prompt-text').style.display = 'none';
