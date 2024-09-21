@@ -10,6 +10,7 @@ const prompts = [
 
 let timer;
 let currentPromptIndex = -1;  // Initialize with an invalid value to indicate no previous prompt
+let gameRunning = false; // Game state variable
 
 document.getElementById('toggle-furigana').addEventListener('click', function() {
     const promptTextElement = document.getElementById('prompt-text');
@@ -18,11 +19,7 @@ document.getElementById('toggle-furigana').addEventListener('click', function() 
     promptTextElement.classList.toggle('hide-furigana');
 
     // Update the button text based on the current state
-    if (promptTextElement.classList.contains('hide-furigana')) {
-        this.textContent = 'Show Furigana';
-    } else {
-        this.textContent = 'Hide Furigana';
-    }
+    this.textContent = promptTextElement.classList.contains('hide-furigana') ? 'Show Furigana' : 'Hide Furigana';
 });
 
 // Function to start a new round
@@ -72,11 +69,13 @@ function showAnswer(showEnglish) {
     }
 
     // Automatically start a new round after showing the answer
-    setTimeout(startNewRound, 3000); // Change the delay as needed
+    setTimeout(() => {
+        startNewRound();
+        gameRunning = false; // Reset the flag when starting a new round
+    }, 3000); // Change the delay as needed
 }
 
-let gameRunning = false; // Add this line
-
+// Start the game when the start button is pressed
 document.getElementById('start-button').addEventListener('click', function() {
     console.log('Start button pressed!');
 
@@ -85,28 +84,6 @@ document.getElementById('start-button').addEventListener('click', function() {
     gameRunning = true; // Set the flag to true
 
     this.disabled = true; // Optional: Disable the button after starting the game
-
-    // Start the first round
-    startNewRound();
-});
-
-// Modify the showAnswer function to reset the game flag
-function showAnswer(showEnglish) {
-    const prompt = prompts[currentPromptIndex];
-    document.getElementById('panda-img').src = prompt.image;
-
-    if (showEnglish) {
-        document.getElementById('english-prompt-text').textContent = prompt.en;
-        document.getElementById('english-prompt-text').style.display = 'block';
-    }
-
-    // Automatically start a new round after showing the answer
-    setTimeout(() => {
-        startNewRound();
-        gameRunning = false; // Reset the flag when starting a new round
-    }, 3000); // Change the delay as needed
-}
-
 
     // Start the first round
     startNewRound();
