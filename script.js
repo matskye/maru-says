@@ -75,12 +75,38 @@ function showAnswer(showEnglish) {
     setTimeout(startNewRound, 3000); // Change the delay as needed
 }
 
-// Start the game when the start button is pressed
-document.getElementById('start-button').addEventListener('click', function() {
-    console.log('Start button pressed!'); // Debugging line
+let gameRunning = false; // Add this line
 
-    // Optional: Disable the button after starting the game
-    this.disabled = true; 
+document.getElementById('start-button').addEventListener('click', function() {
+    console.log('Start button pressed!');
+
+    // Prevent starting a new game if one is already running
+    if (gameRunning) return;
+    gameRunning = true; // Set the flag to true
+
+    this.disabled = true; // Optional: Disable the button after starting the game
+
+    // Start the first round
+    startNewRound();
+});
+
+// Modify the showAnswer function to reset the game flag
+function showAnswer(showEnglish) {
+    const prompt = prompts[currentPromptIndex];
+    document.getElementById('panda-img').src = prompt.image;
+
+    if (showEnglish) {
+        document.getElementById('english-prompt-text').textContent = prompt.en;
+        document.getElementById('english-prompt-text').style.display = 'block';
+    }
+
+    // Automatically start a new round after showing the answer
+    setTimeout(() => {
+        startNewRound();
+        gameRunning = false; // Reset the flag when starting a new round
+    }, 3000); // Change the delay as needed
+}
+
 
     // Start the first round
     startNewRound();
