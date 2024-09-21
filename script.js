@@ -26,17 +26,23 @@ function cleanForTTS(html) {
     const div = document.createElement('div');
     div.innerHTML = html;
 
-    const rubyElements = div.querySelectorAll('ruby');
     let spokenText = "";
-
-    rubyElements.forEach(ruby => {
-        const rt = ruby.querySelector('rt');
-        if (rt) {
-            spokenText += div.childNodes[0].textContent;  
+    
+    // Loop through all child nodes
+    div.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            // If it's a text node, add its text directly
+            spokenText += node.textContent;
+        } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'ruby') {
+            // If it's a ruby element, find the furigana
+            const rt = node.querySelector('rt');
+            if (rt) {
+                spokenText += rt.textContent; // Replace the kanji with its furigana
+            }
         }
     });
 
-    return spokenText.trim(); // Remove any trailing spaces
+    return spokenText.trim(); // Remove any leading or trailing spaces
 }
 
 function speak(text) {
