@@ -18,6 +18,20 @@ function startGame() {
     const selectedTime = document.getElementById('time-select').value;
     const showEnglish = document.getElementById('english-translation').checked;
 
+    document.getElementById('toggle-furigana').addEventListener('click', function() {
+    const promptTextElement = document.getElementById('prompt-text'); // Where your ruby tags are
+
+    // Toggle the 'hide-furigana' class to hide or show furigana
+    promptTextElement.classList.toggle('hide-furigana');
+
+    // Update the button text based on the current state
+    if (promptTextElement.classList.contains('hide-furigana')) {
+        this.textContent = 'Show Furigana';
+    } else {
+        this.textContent = 'Hide Furigana';
+    }
+});
+
     // Ensure the new prompt is different from the last one
     let newPromptIndex;
     do {
