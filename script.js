@@ -9,45 +9,6 @@ const prompts = [
     // Add more prompts and corresponding images here
 ];
 
-let furiganaCache = {};
-
-function fetchFuriganaForAllPrompts() {
-    const allPromises = prompts.map(prompt => {
-        return fetch('https://furigana.info/api', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ text: prompt.jp, format: 'json' })
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Cache the furigana-annotated text for each prompt
-            furiganaCache[prompt.jp] = data.text;  // Cache the result
-        })
-        .catch(error => console.error('Error fetching furigana:', error));
-    });
-
-    // Wait until all requests are completed
-    return Promise.all(allPromises);
-}
-
-// Initialize game and pre-fetch furigana when the page loads
-window.onload = function() {
-    // Pre-fetch furigana for all prompts
-    fetchFuriganaForAllPrompts().then(() => {
-        console.log('All furigana pre-fetched!');
-        // Now the game can start
-    });
-};
-
-// In your startGame() function, use the pre-fetched furigana from the cache
-function startGame() {
-    const prompt = prompts[currentPromptIndex];
-    const furiganaText = furiganaCache[prompt.jp];  // Get pre-fetched furigana
-    document.getElementById('prompt-text').innerHTML = furiganaText;
-}
-
 let timer;
 let currentPromptIndex = -1;  // Initialize with an invalid value to indicate no previous prompt
 
