@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maru Says</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>まるが言う (Maru Says)</h1>
+
+        <div class="settings">
+            <label for="time-select">タイマーを選択 (Select timer):</label>
+            <input type="number" id="time-select" min="5" max="60" value="10"> 秒
+
+            <label for="english-translation">英語の翻訳を表示 (Show English translation):</label>
+            <input type="checkbox" id="english-translation">
+        </div>
+
+        <div class="panda-container">
+            <img id="panda-img" src="images/maru_default.png" alt="Maru the Red Panda">
+        </div>
+
+        <div class="prompt">
+            <p id="prompt-text">まるが言う: 右手を上げてください。</p>
+            <p id="english-prompt-text" style="display:none;">(Maru says: Raise your right hand.)</p>
+        </div>
+
+        <button id="start-button">スタート (Start)</button>
+
+        <div class="timer">
+            <p id="timer-display">タイマー: 0秒</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

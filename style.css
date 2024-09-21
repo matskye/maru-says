@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.game-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff4500;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+.panda-container {
+    margin: 20px 0;
+}
+
+#panda-img {
+    width: 200px;
+    height: 200px;
+}
+
+.prompt p {
+    font-size: 1.5em;
+}
+
+.timer p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e63900;
+}
