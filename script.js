@@ -14,7 +14,7 @@ let currentPromptIndex = -1;  // Initialize with an invalid value to indicate no
 
 document.getElementById('start-button').addEventListener('click', startGame);
 
-function startGame() {
+function startNewRound() {
     const selectedTime = document.getElementById('time-select').value;
     const showEnglish = document.getElementById('english-translation').checked;
 
@@ -73,4 +73,9 @@ function showAnswer(showEnglish) {
         document.getElementById('english-prompt-text').textContent = prompt.en;
         document.getElementById('english-prompt-text').style.display = 'block';
     }
+}
+
+        // Automatically start a new round
+        startNewRound();
+    }, selectedTime * 1000); // Convert seconds to milliseconds
 }
