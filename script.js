@@ -22,24 +22,21 @@ document.getElementById('toggle-furigana').addEventListener('click', function() 
     this.textContent = promptTextElement.classList.contains('hide-furigana') ? 'Show Furigana' : 'Hide Furigana';
 });
 
-function extractFurigana(html) {
+function cleanForTTS(html) {
     const div = document.createElement('div');
     div.innerHTML = html;
 
-    // Use querySelectorAll to get all ruby elements and extract furigana
     const rubyElements = div.querySelectorAll('ruby');
-    const furiganaArray = [];
+    let spokenText = "";
 
     rubyElements.forEach(ruby => {
         const rt = ruby.querySelector('rt');
         if (rt) {
-            furiganaArray.push(rt.textContent); // Get the furigana
-        } else {
-            furiganaArray.push(ruby.textContent); // Fallback to the base text
+            spokenText += div.childNodes[0].textContent;  
         }
     });
 
-    return furiganaArray.join(' '); // Join with spaces to form a coherent string
+    return spokenText.trim(); // Remove any trailing spaces
 }
 
 function speak(text) {
@@ -65,9 +62,9 @@ function startNewRound() {
     // Display the Japanese prompt
     document.getElementById('prompt-text').innerHTML = prompt.jp;
 
-    // Extract furigana for TTS
-    const sanitizedText = extractFurigana(prompt.jp);
-    speak(sanitizedText); // Use sanitized text for TTS
+    // Clean the prompt for TTS
+    const ttsText = cleanForTTS(prompt.jp);
+    speak(ttsText); // Speak the cleaned-up text for TTS
     
     // Hide the English prompt initially, it will be shown after the timer runs out
     document.getElementById('english-prompt-text').style.display = 'none';
