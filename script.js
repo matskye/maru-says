@@ -11,6 +11,15 @@ const prompts = [
     { jp: "まるが言う: キックしてください。", en: "Maru says: Please Kick.", image: "images/maru_kick.png" },
     { jp: "まるが言う: <ruby>左足<rt>ひだりあし</rt></ruby>を<ruby>上<rt>あ</rt></ruby>げてください。", en: "Maru says: Raise your left leg.", image: "images/maru_raise_left_foot.png" },
     { jp: "まるが言う: <ruby>右足<rt>みぎあし</rt></ruby>を<ruby>上<rt>あ</rt></ruby>げてください。", en: "Maru says: Raise your right leg.", image: "images/maru_raise_right_foot.png" },
+    { jp: "まるが言う: <ruby>お辞儀<rt>おじぎ</rt></ruby>してください。", en: "Maru says: Bow.", image: "images/maru_bow.png" },
+    { jp: "まるが言う: <ruby>くるくる<rt>くるくる</rt></ruby>回ってください。", en: "Maru says: Spin around.", image: "images/maru_spin.png" },
+    { jp: "まるが言う: <ruby>右<rt>みぎ</rt></ruby>にスピン", en: "Maru says: Spin to the right.", image: "images/maru_spin.png" },
+    { jp: "まるが言う: <ruby>右<rt>みぎ</rt></ruby>へスピン", en: "Maru says: Spin to the right.", image: "images/maru_spin.png" },
+    { jp: "まるが言う: <ruby>左<rt>ひだり</rt></ruby>にスピン", en: "Maru says: Spin to the lef.", image: "images/maru_spin.png" },
+    { jp: "まるが言う: <ruby>左<rt>ひだり</rt></ruby>へスピン", en: "Maru says: Spin to the left.", image: "images/maru_spin.png" },
+    { jp: "まるが言う: ダンス", en: "Maru says: dance.", image: "images/maru_dance.png" },
+    { jp: "まるが言う: ダンスを<ruby>踊<rt>おど</rt></ruby>ろう", en: "Maru says: dance a dance.", image: "images/maru_dance.png" },
+    { jp: "まるが言う: <ruby>小<rt>ちい</rt></ruby>さなダンスを<ruby>踊<rt>おど</rt></ruby>ろう", en: "Maru says: Do a little dance", image: "images/maru_dance.png" },
     // Add more prompts and corresponding images here
 ];
 
