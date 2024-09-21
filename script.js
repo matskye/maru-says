@@ -77,7 +77,11 @@ function showAnswer(showEnglish) {
 
 // Start the game when the start button is pressed
 document.getElementById('start-button').addEventListener('click', function() {
-  
+    console.log('Start button pressed!'); // Debugging line
+
+    // Optional: Disable the button after starting the game
+    this.disabled = true; 
+
     // Start the first round
     startNewRound();
 });
