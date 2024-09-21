@@ -5,21 +5,14 @@ const prompts = [
     { jp: "まるが言う: <ruby>手<rt>て</rt></ruby>を<ruby>叩<rt>たた</rt></ruby>いてください。", en: "Maru says: Clap your hands.", image: "images/maru_clap.png" },
     { jp: "まるが言う: こんにちはと<ruby>言<rt>い</rt></ruby>ってください。", en: "Maru says: Say hello.", image: "images/maru_say_hello.png" },
     { jp: "まるが言う: <ruby>手<rt>て</rt></ruby>を<ruby>見<rt>み</rt></ruby>せてください。", en: "Maru says: Show your hands.", image: "images/maru_show_hands.png" },
-
     // Add more prompts and corresponding images here
 ];
 
 let timer;
 let currentPromptIndex = -1;  // Initialize with an invalid value to indicate no previous prompt
 
-document.getElementById('start-button').addEventListener('click', startGame);
-
-function startNewRound() {
-    const selectedTime = document.getElementById('time-select').value;
-    const showEnglish = document.getElementById('english-translation').checked;
-
-    document.getElementById('toggle-furigana').addEventListener('click', function() {
-    const promptTextElement = document.getElementById('prompt-text'); // Where your ruby tags are
+document.getElementById('toggle-furigana').addEventListener('click', function() {
+    const promptTextElement = document.getElementById('prompt-text');
 
     // Toggle the 'hide-furigana' class to hide or show furigana
     promptTextElement.classList.toggle('hide-furigana');
@@ -32,6 +25,11 @@ function startNewRound() {
     }
 });
 
+// Function to start a new round
+function startNewRound() {
+    const selectedTime = document.getElementById('time-select').value;
+    const showEnglish = document.getElementById('english-translation').checked;
+
     // Ensure the new prompt is different from the last one
     let newPromptIndex;
     do {
@@ -43,7 +41,6 @@ function startNewRound() {
 
     // Display the Japanese prompt
     document.getElementById('prompt-text').innerHTML = prompt.jp;
-
 
     // Hide the English prompt initially, it will be shown after the timer runs out
     document.getElementById('english-prompt-text').style.display = 'none';
@@ -73,9 +70,16 @@ function showAnswer(showEnglish) {
         document.getElementById('english-prompt-text').textContent = prompt.en;
         document.getElementById('english-prompt-text').style.display = 'block';
     }
+
+    // Automatically start a new round after showing the answer
+    setTimeout(startNewRound, 3000); // Change the delay as needed
 }
 
-        // Automatically start a new round
-        startNewRound();
-    }, selectedTime * 1000); // Convert seconds to milliseconds
-}
+// Start the game when the start button is pressed
+document.getElementById('start-button').addEventListener('click', function() {
+    // You might want to disable the start button after the first click
+    this.disabled = true; // Optional: Disable the button after starting the game
+
+    // Start the first round
+    startNewRound();
+});
