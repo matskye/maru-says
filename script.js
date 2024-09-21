@@ -30,13 +30,8 @@ function startGame() {
     // Display the Japanese prompt
     document.getElementById('prompt-text').textContent = prompt.jp;
 
-    // Conditionally display the English prompt if checked
-    if (showEnglish) {
-        document.getElementById('english-prompt-text').textContent = prompt.en;
-        document.getElementById('english-prompt-text').style.display = 'block';
-    } else {
-        document.getElementById('english-prompt-text').style.display = 'none';
-    }
+    // Hide the English prompt initially, it will be shown after the timer runs out
+    document.getElementById('english-prompt-text').style.display = 'none';
 
     // Start the timer
     let timeLeft = selectedTime;
@@ -48,15 +43,19 @@ function startGame() {
         document.getElementById('timer-display').textContent = `タイマー: ${timeLeft}秒`;
         if (timeLeft <= 0) {
             clearInterval(timer);
-            showAnswer();
+            showAnswer(showEnglish);
         }
     }, 1000);
 }
 
-function showAnswer() {
+function showAnswer(showEnglish) {
     // Display the image corresponding to the prompt
     const prompt = prompts[currentPromptIndex];
     document.getElementById('panda-img').src = prompt.image;
 
-    // Optionally, you could add more logic to track the user's input and give feedback here
+    // Display the English translation if the user checked the option
+    if (showEnglish) {
+        document.getElementById('english-prompt-text').textContent = prompt.en;
+        document.getElementById('english-prompt-text').style.display = 'block';
+    }
 }
