@@ -55,6 +55,7 @@ function speak(text) {
 function startNewRound() {
     const selectedTime = document.getElementById('time-select').value;
     const showEnglish = document.getElementById('english-translation').checked;
+    const ttsEnabled = document.getElementById('toggle-tts').checked; 
 
     // Ensure the new prompt is different from the last one
     let newPromptIndex;
@@ -70,7 +71,9 @@ function startNewRound() {
 
     // Clean the prompt for TTS
     const ttsText = cleanForTTS(prompt.jp);
-    speak(ttsText); // Speak the cleaned-up text for TTS
+    if (ttsEnabled) {
+        speak(ttsText); // Only speak if TTS is enabled
+    }
     
     // Hide the English prompt initially, it will be shown after the timer runs out
     document.getElementById('english-prompt-text').style.display = 'none';
