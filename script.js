@@ -72,7 +72,7 @@ function startNewRound() {
     // Clean the prompt for TTS
     const ttsText = cleanForTTS(prompt.jp);
     if (ttsEnabled) {
-        speak(ttsText); // Only speak if TTS is enabled
+        speak(ttsText);
     }
     
     // Hide the English prompt initially, it will be shown after the timer runs out
