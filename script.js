@@ -41,6 +41,18 @@ const prompts = [
     { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>って<ruby>止<rt>と</rt></ruby>まってください。", en: "Maru says: Run and stop.", image: "images/maru_run.png" },
     { jp: "まるが言う: <ruby>友<rt>とも</rt></ruby>だちと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run with a friend.", image: "images/maru_run_with_friend.png" },
     { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>りながら<ruby>歌<rt>うた</rt></ruby>ってください。", en: "Maru says: Run and sing.", image: "images/maru_run_sing.png" },
+    { jp: "まるが言う: <ruby>目<rt>め</rt></ruby>を<ruby>閉<rt>とじ</rt></ruby>てください。", en: "Maru says: Close your eyes.", image: "images/maru_close_eyes.png" },
+    { jp: "まるが言う: <ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>大<rt>おお</rt></ruby>きく<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh out loud.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>お腹<rt>おなか</rt></ruby>を<ruby>抱<rt>かか</rt></ruby>えて<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Belly laugh.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>楽<rt>たの</rt></ruby>しい<ruby>笑顔<rt>えがお</rt></ruby>を<ruby>見<rt>み</rt></ruby>せてください。", en: "Maru says: Show you're happy.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>悪<rt>わる</rt></ruby>い<ruby>冗談<rt>じょうだん</rt></ruby>に<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh at a bad joke.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>静<rt>しず</rt></ruby>かに<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh quietly.", image: "images/maru_shy_laugh.png" },
+    { jp: "まるが言う: <ruby>止<rt>と</rt></ruby>まらないように<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh uncontrollably.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>口<rt>くち</rt></ruby>を<ruby>押<rt>お</rt></ruby>さえて<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh with your hand over your mouth.", image: "images/maru_shy_laugh.png" },
+    { jp: "まるが言う: <ruby>恥<rt>はず</rt></ruby>かしそうに<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh shyly.", image: "images/maru_shy_laugh.png" },
+    { jp: "まるが言う: <ruby>声<rt>こえ</rt></ruby>を<ruby>出<rt>だ</rt></ruby>して<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh with sound.", image: "images/maru_laugh.png" },
+    { jp: "まるが言う: <ruby>小<rt>ちい</rt></ruby>さな<ruby>笑<rt>わら</rt></ruby>い<ruby>声<rt>ごえ</rt></ruby>で<ruby>笑<rt>わら</rt></ruby>ってください。", en: "Maru says: Laugh in a small voice.", image: "images/maru_shy_laugh.png" },
     // Add more prompts and corresponding images here
 ];
 
