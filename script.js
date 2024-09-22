@@ -29,7 +29,7 @@ const prompts = [
     { jp: "まるが言う: <ruby>鶏<rt>にわとり</rt></ruby>のように<ruby>鳴<rt>な</rt></ruby>いてください。", en: "Maru says: Cluck like a chicken.", image: "images/chicken.png" },
     { jp: "まるが言う: <ruby>魚<rt>さかな</rt></ruby>のように<ruby>泳<rt>およ</rt></ruby>いでください。", en: "Maru says: Swim like a fish.", image: "images/swim.png" },
     { jp: "まるが言う: <ruby>ウサギ<rt>うさぎ</rt></ruby>のように<ruby>跳<rt>は</rt></ruby>ねてください。", en: "Maru says: Hop like a rabbit.", image: "images/maru_hop.png" },
-    { jp: "まるが言う: <ruby>ライオン<rt>らいおん</rt></ruby>のように<ruby>吠<rt>ほ</rt></ruby>えてください。", en: "Maru says: Roar like a lion.", image: "images/maru_lionsroar.png" },
+    { jp: "まるが言う: ライオンのように<ruby>吠<rt>ほ</rt></ruby>えてください。", en: "Maru says: Roar like a lion.", image: "images/maru_lionsroar.png" },
     { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run.", image: "images/maru_run.png" },
     { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>って<ruby>逃<rt>に</rt></ruby>げてください。", en: "Maru says: Run away.", image: "images/maru_run_away.png" },
     { jp: "まるが言う: その<ruby>場<rt>ば</rt></ruby>で<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run in place.", image: "images/maru_run.png" },
