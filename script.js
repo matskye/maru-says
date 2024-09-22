@@ -30,6 +30,17 @@ const prompts = [
     { jp: "まるが言う: <ruby>魚<rt>さかな</rt></ruby>のように<ruby>泳<rt>およ</rt></ruby>いでください。", en: "Maru says: Swim like a fish.", image: "images/swim.png" },
     { jp: "まるが言う: <ruby>ウサギ<rt>うさぎ</rt></ruby>のように<ruby>跳<rt>は</rt></ruby>ねてください。", en: "Maru says: Hop like a rabbit.", image: "images/maru_hop.png" },
     { jp: "まるが言う: <ruby>ライオン<rt></rt></ruby>のように<ruby>吠<rt>ほ</rt></ruby>えてください。", en: "Maru says: Roar like a lion.", image: "images/maru_lionsroar.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>って<ruby>逃<rt>に</rt></ruby>げてください。", en: "Maru says: Run away.", image: "images/maru_run_away.png" },
+    { jp: "まるが言う: その<ruby>場<rt>ば</rt></ruby>で<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run in place.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>ジョギング<rt>じょぎんぐ</rt></ruby>してください。", en: "Maru says: Jog.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>全力<rt>ぜんりょく</rt></ruby>で<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Sprint.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>って<ruby>戻<rt>もど</rt></ruby>ってきてください。", en: "Maru says: Run back.", image: "images/maru_run.png" },
+    { jp: "まるが言う: ゆっくり<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run slowly.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>りながら<ruby>手<rt>て</rt></ruby>を<ruby>振<rt>ふ</rt></ruby>ってください。", en: "Maru says: Run and wave your hands.", image: "images/maru_run_wave.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>って<ruby>止<rt>と</rt></ruby>まってください。", en: "Maru says: Run and stop.", image: "images/maru_run.png" },
+    { jp: "まるが言う: <ruby>友<rt>とも</rt></ruby>だちと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>走<rt>はし</rt></ruby>ってください。", en: "Maru says: Run with a friend.", image: "images/maru_run_with_friend.png" },
+    { jp: "まるが言う: <ruby>走<rt>はし</rt></ruby>りながら<ruby>歌<rt>うた</rt></ruby>ってください。", en: "Maru says: Run and sing.", image: "images/maru_run_sing.png" },
     // Add more prompts and corresponding images here
 ];
 
